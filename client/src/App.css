@@ -1,0 +1,469 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #09d3ac;
+}
+
+h1 {
+    text-align: center;
+    color: #fff;
+    font-family: raleway;
+    margin-top: 20px;
+    font-size: 50px;
+    font-weight: 100;
+    letter-spacing: 12px;
+    border-bottom: 1px solid #86dbff;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    color: #3cffed;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #03a9f4, 0 0 40px #03a9f4, 0 0 50px #03a9f4, 0 0 60px #03a9f4, 0 0 70px #03a9f4;
+}
+ 
+.main-container {
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+}
+ 
+.btn-row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height:180px;
+}
+ 
+.ct-btn {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    cursor: pointer;
+    margin:20px;
+}
+ 
+/* Common CSS for all Buttons */
+button {
+    font-size: 20px;
+    width: 230px;
+    height: 80px;
+    border-radius: 4px;
+    cursor:pointer;
+    font-family: lato;
+}
+ 
+/* Solid Button */
+.sky-neon {
+    color: #1c5169;
+    background-color: #86dbff;
+    -webkit-transition: .3s all ease-in;
+    transition: .3s all ease-in;
+    border: 2px solid transparent;
+}
+ 
+.sky-neon:hover, .sky-neon:focus {
+    -webkit-box-shadow: 0px 0px 20px 15px #3cc6d8;
+    box-shadow: 0px 0px 30px 20px #3cc6d8;
+    background-color: #d7f3ff;
+}
+ 
+/* Breath Button */
+.breath-neon {
+    color: #2b8a2f;
+    background-color: #9dffa1;
+    border: 2px solid transparent;
+    -webkit-transition: .5s all ease-in;
+    transition: .5s all ease-in;
+}
+ 
+.breath-neon:hover, .breath-neon:focus {
+    background-color: #ceffd0;
+    -webkit-animation: breathing 3s infinite;
+            animation: breathing 3s infinite;
+    -webkit-box-shadow: 0px 0px 10px 0px #b5ffb8;
+            box-shadow: 0px 0px 10px 0px #b5ffb8;
+}
+ 
+/* Heart Bit Button */
+.heart-bit-neon {
+    background-color: #ff6666;
+    color: #fff;
+    border: 2px solid transparent;
+}
+ 
+.heart-bit-neon:hover, .heart-bit-neon:focus {
+    background-color: #ff6666;
+    color: #fff;
+    -webkit-animation: heartBit 1.2s infinite;
+            animation: heartBit 1.2s infinite;
+}
+ 
+/* Simple Border Button */
+.border-neon {
+    background-color: transparent;
+    border: 2px solid pink;
+    color: pink;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+ 
+.border-neon:hover, .border-neon:focus {
+    -webkit-box-shadow: inset 0px 0px 8px 3px #ff94b8;
+    box-shadow: 0px 0px 10px 3px #ff94b8, inset 0px 0px 10px 3px #ff94b8;
+    border-color: #fff;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ff94b8, 0 0 40px #ff94b8, 0 0 50px #ff94b8, 0 0 60px #ff94b8, 0 0 70px #ff94b8
+}
+ 
+/* Inner Height Button */
+.inner-height-neon {
+    background-color: transparent;
+    border: 2px solid #00ccb9;
+    color: #00ccb9;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    position: relative;
+}
+ 
+    .inner-height-neon .bg-height {
+        background-color: #6bfff1;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 50%;
+        bottom: 0;
+        height: 0%;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-transition: height .3s, top .3s;
+        transition: height .3s, top .3s;
+    }
+ 
+    .inner-height-neon .btn-text {
+        z-index: 1;
+    }
+ 
+.inner-height-neon:hover {
+    -webkit-box-shadow: 0px 0px 30px 20px #45ffee;
+            box-shadow: 0px 0px 30px 20px #45ffee;
+    border-color:#6bfff1;
+}
+ 
+.inner-height-neon:hover .bg-height {
+    height:100%;
+    top:0%;
+    z-index: -1;
+}
+ 
+.inner-height-neon:hover .btn-text {
+    color:#1aa99b
+}
+ 
+/* Inner Width Buttton */
+.inner-width-neon {
+    background-color: transparent;
+    border: 2px solid #ffed5a;
+    color: #ffed5a;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    position: relative;
+}
+ 
+    .inner-width-neon .bg-width {
+        background-color: #fff6a8;
+        position: absolute;
+        left: 50%;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        height: 100%;
+        width: 0%;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-transition: width .3s, left .3s;
+        transition: width .3s, left .3s;
+    }
+ 
+    .inner-width-neon .btn-text {
+        z-index: 1;
+    }
+ 
+.inner-width-neon:hover {
+    -webkit-box-shadow: 0px 0px 30px 20px #fff5a2;
+            box-shadow: 0px 0px 30px 20px #fff5a2;
+    border-color:#fff6a8;
+}
+ 
+.inner-width-neon:hover .bg-width {
+    width:100%;
+    left:0%;
+    z-index: -1;
+}
+ 
+.inner-width-neon:hover .btn-text {
+    color:#a79500
+}
+ 
+/* Gradient Simple */
+.gradient-neon {
+    background-image: linear-gradient(45deg, red , #FFEB3B, #ff2a73);
+    border: none;
+    color: #710000;
+}
+ 
+.gr-solid {
+    position: relative;
+}
+ 
+    .gr-solid:hover .gradient-neon{
+        background-image: linear-gradient(45deg, #ff5555 , #fff179, #ff5992);
+    }
+ 
+    .gr-shadow1, .gr-shadow1::before, .gr-shadow1::after {
+        content:'';
+        position: absolute;
+        top: 0px;
+        border-radius: 4px;
+        width: 139px;
+        height: 79px;
+        z-index: -1;
+        -webkit-transition: all .3s ease-in;
+        transition: all .3s ease-in;
+        opacity:0;
+    }
+ 
+    .gr-solid:hover .gr-shadow1, .gr-shadow1::before, .gr-shadow1::after {
+        opacity:1;
+    }
+ 
+    .gr-shadow1 {
+        -webkit-box-shadow: 0px 0px 30px 20px #ffe63a;
+                box-shadow: 0px 0px 30px 20px #ffe63a;
+        left:45px;
+    }
+ 
+    .gr-shadow1::before {        
+        right: 0;
+        bottom: 0;
+        left: -45px;
+        -webkit-box-shadow: 0px 0px 30px 20px #ff4712;
+                box-shadow: 0px 0px 30px 20px #ff4712;
+    }
+ 
+    .gr-shadow1::after {        
+        bottom: 0;
+        left: 45px;
+        -webkit-box-shadow: 0px 0px 30px 20px #ff466c;
+                box-shadow: 0px 0px 30px 20px #ff466c;
+    }
+ 
+/* Movable Gradient Button */
+.gr-move {
+    position: relative;
+}
+ 
+    .gr-move .gradient-neon {
+        background-image: -webkit-gradient(linear, left top, right top, from(#9C27B0) , color-stop(#E91E63), to(#8BC34A));
+        background-image: linear-gradient(90deg, #9C27B0 , #E91E63, #8BC34A);
+        background-size: 300%;
+        border: none;
+        color: #fff;
+    }
+ 
+    .gr-move:hover .gradient-neon {
+        -webkit-animation:moveInnerBg 4s infinite;
+                animation:moveInnerBg 4s infinite;
+    }
+     
+    .gr-move:hover .gradient-neon{
+        background-image: -webkit-gradient(linear, left top, right top, from(#ef92ff) , color-stop(#ff7ba8), to(#d0ff99));
+        background-image: linear-gradient(90deg, #ef92ff , #ff7ba8, #d0ff99);
+    }
+ 
+    .gr-shadow2, .gr-shadow2::before, .gr-shadow2::after {
+        content:'';
+        position: absolute;
+        top: 0px;
+        border-radius: 4px;
+        width: 139px;
+        height: 79px;
+        z-index: -1;
+        -webkit-transition: all .3s ease-in;
+        transition: all .3s ease-in;            
+        opacity:0;
+    }
+ 
+    .gr-move:hover .gr-shadow2, .gr-shadow2::before, .gr-shadow2::after {
+        opacity:1;
+    }
+ 
+    .gr-shadow2 {
+        -webkit-box-shadow: 0px 0px 30px 20px #d4f39a;
+                box-shadow: 0px 0px 30px 20px #d4f39a;
+        left:45px;
+    }
+ 
+    .gr-shadow2::before {        
+        right: 0;
+        bottom: 0;
+        -webkit-box-shadow: 0px 0px 30px 20px #fb84ff;
+                box-shadow: 0px 0px 30px 20px #fb84ff;
+        -webkit-animation:moveBg1 2.5s infinite;
+                animation:moveBg1 2.5s infinite;
+    }
+ 
+    .gr-shadow2::after {        
+        bottom: 0;
+        -webkit-box-shadow: 0px 0px 30px 20px #eeaba3;
+                box-shadow: 0px 0px 30px 20px #eeaba3;
+        -webkit-animation:moveBg2 3s infinite;
+                animation:moveBg2 3s infinite;
+    }
+ 
+    /* Gradient Tri Color */
+    .gr-tri {
+        position: relative;
+    }
+ 
+        .gr-tri .gradient-neon {
+            background-image: -webkit-gradient(linear , left top, left bottom , from(#FF5722) , color-stop(#ffffff), to(#2b8a2f));
+            background-image: linear-gradient(#FF5722 , #ffffff, #2b8a2f);
+            border: none;
+            color: #3F51B5;
+        }
+     
+        .gr-tri:hover .gradient-neon{
+            background-image: -webkit-gradient(linear , left top, left bottom , from(#FF5722) , color-stop(#ffffff), to(#2b8a2f));
+            background-image: linear-gradient(#FF5722 , #ffffff, #2b8a2f);
+        }
+     
+        .gr-shadow3, .gr-shadow3::before, .gr-shadow3::after {
+            content:'';
+            position: absolute;
+            top: 40px;
+            border-radius: 4px;
+            width: 230px;
+            height: 0px;
+            z-index: -1;
+            -webkit-transition: all .3s ease-in;
+            transition: all .3s ease-in;
+            opacity:0;
+        }
+ 
+        .gr-tri:hover .gr-shadow3, .gr-shadow3::before, .gr-shadow3::after {
+            opacity:1;
+        }
+     
+        .gr-shadow3 {
+            -webkit-box-shadow: 0px 0px 30px 20px #fff;
+                    box-shadow: 0px 0px 30px 20px #fff;
+            left: 0;
+        }
+     
+        .gr-shadow3::before {        
+            right: 0;
+            top: -35px;
+            bottom: 0;
+            left: 0px;
+            -webkit-box-shadow: 0px 0px 30px 20px #FF5722;
+                    box-shadow: 0px 0px 30px 20px #FF5722;
+        }
+     
+        .gr-shadow3::after {        
+            bottom: 0;
+            left: 0px;
+            -webkit-box-shadow: 0px 0px 30px 20px #2b8a2f;
+                    box-shadow: 0px 0px 30px 20px #2b8a2f;
+        }
+ 
+/* Animation for Breath Button */
+@-webkit-keyframes breathing {
+    0% {-webkit-box-shadow: 0px 0px 10px 0px #b5ffb8;box-shadow: 0px 0px 10px 0px #b5ffb8;}
+    50% {-webkit-box-shadow: 0px 0px 30px 20px #b5ffb8;box-shadow: 0px 0px 30px 20px #b5ffb8;}
+    100% {-webkit-box-shadow: 0px 0px 10px 0px #b5ffb8;box-shadow: 0px 0px 10px 0px #b5ffb8;}
+}
+ 
+@keyframes breathing {
+    0% {-webkit-box-shadow: 0px 0px 10px 0px #b5ffb8;box-shadow: 0px 0px 10px 0px #b5ffb8;}
+    50% {-webkit-box-shadow: 0px 0px 30px 20px #b5ffb8;box-shadow: 0px 0px 30px 20px #b5ffb8;}
+    100% {-webkit-box-shadow: 0px 0px 10px 0px #b5ffb8;box-shadow: 0px 0px 10px 0px #b5ffb8;}
+}
+ 
+/* Animation for Heart Bit Button */
+@keyframes heartBit {
+    0%, 30% {-webkit-box-shadow: 0px 0px 30px 10px #ff5a5a;box-shadow: 0px 0px 30px 10px #ff5a5a;}
+    40%,50% {-webkit-box-shadow: 0px 0px 30px 20px #ff5a5a;box-shadow: 0px 0px 30px 20px #ff5a5a;}
+    100% {-webkit-box-shadow: 0px 0px 30px 0px #ff5a5a;box-shadow: 0px 0px 30px 0px #ff5a5a;}
+}
+ 
+@-webkit-keyframes heartBit {
+    0%, 30% {-webkit-box-shadow: 0px 0px 30px 10px #ff5a5a;box-shadow: 0px 0px 30px 10px #ff5a5a;}
+    40%,50% {-webkit-box-shadow: 0px 0px 30px 20px #ff5a5a;box-shadow: 0px 0px 30px 20px #ff5a5a;}
+    100% {-webkit-box-shadow: 0px 0px 30px 0px #ff5a5a;box-shadow: 0px 0px 30px 0px #ff5a5a;}
+}
+ 
+/* Animation for Moving Gradient Background */
+@-webkit-keyframes moveBg1 {
+    0% {left :0px;}
+    50% {left:-45px;}
+    100% {left:0px;}
+}
+ 
+@keyframes moveBg1 {
+    0% {left :0px;}
+    50% {left:-45px;}
+    100% {left:0px;}
+}
+ 
+@-webkit-keyframes moveBg2 {
+    0% {left :0px;}
+    50% {left:45px;}
+    100% {left:0px;}
+}
+ 
+@keyframes moveBg2 {
+    0% {left :0px;}
+    50% {left:45px;}
+    100% {left:0px;}
+}
+ 
+/* Animation for Moving Inner Background Button */
+@-webkit-keyframes moveInnerBg {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+ 
+@keyframes moveInnerBg {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
